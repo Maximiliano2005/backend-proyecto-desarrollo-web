@@ -1,3 +1,4 @@
+
 from django.db import models
 
 # Create your models here.
@@ -22,6 +23,7 @@ class Reserva(models.Model):
         ("pendiente" , "Pendiente"),
         ("confirmada", "Confirmada"),
         ("cancelada", "Cancelada")
+
     ]) 
 fecha_creacion = models.DateTimeField(auto_now_add= True)
 vehiculo = models.ForeignKey(Vehiculo, on_delete=models.PROTECT)
